@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logincode.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="left_col">
+                <h1>Welcome!</h1>
+                <h3>Create new account</h3>
+                <input id="handle" type="submit" value="SignUp" onclick="handleSignup()" />
+                
+            </div>
+            <div class="right_col">
+                <!-- Login form -->
+                <form id='login' class="form" >
+                    <div class="login">
+                        <h1>Login</h1>
+                        <label>Username/Email <span>*</span></label>
+                        <input type="text" placeholder="Email or user Name" />
+                        <label>Password<span>*</span></label>
+                        <input type="password" placeholder="Password" />
+                        <input id='sub' type="submit" value="login"  />
+                        <!-- <button id="mybtn2">Log in</button> -->
+                    </div>
+                </form>
+                <!-- Signup form -->
+                <form id=signup1 style="display: none">
+                    <div class="signup">
+                        <h1>Sing Up</h1>
+                        <label>Username/Email <span>*</span></label>
+                        <input type="text" placeholder="Email or user Name" />
+                        <label>Password<span>*</span></label>
+                        <input type="password" placeholder="Password" />
+                        <input id='reg' type="submit" value="Register"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>  
+    
+    <script src="logincode.js"></script>
+</body>
+
+</html>

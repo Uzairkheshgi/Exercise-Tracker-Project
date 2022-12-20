@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function handleSubmit() {
+            // e.preventDefault();
+            // document.getElementById(exercise).preventDefault()
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        
+        <!-- <p>Login to track your exercise details or signup to create new account</p> -->
+        <div class="containerlogin">
+            <span>App Logo</span>
+            <!-- Login form -->
+            <form id="login" event.preventDefault>
+                <input type="text" placeholder="Username" required />
+                <input type="password" placeholder="password" required />
+                <button type="submit">Log in</button>
+            </form>
+             <!-- <a href="#">Login</a> -->
+             <a href="#">Signup</a>
+        </div>
+        <div class="containersignup">
+            <!-- Signup Form -->
+            <form id="signup" event.preventDefault>
+                    <input type="text" placeholder="username" required />
+                    <input type="password" placeholder="password" prequired />
+                    <input type="email" placeholder="email" required />
+                    <button>Create_Account</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Form to enter Exercise Details -->
+    <form id="exercise" event.preventDefault())>
+        <div class="container">
+            <label>Name </label>
+            <input type="text" />
+            <label>Description</label>
+            <input type="text" />
+            <label>Activity Type</label>
+            <select>
+                <option>Run</option>
+                <option>Bicyle</option>
+                <option>Swim</option>
+                <option>Ride</option>
+                <option>Walk</option>
+                <option>Hike</option>
+            </select>
+            <label>Duratin</label>
+            <input type="number" />
+            <label>Date</label>
+            <input type="date" />
+            <button type="submit" onclick="handleSubmit()">Add_Data</button>
+        </div>
+    </form>
+</body>
+
+</html>
