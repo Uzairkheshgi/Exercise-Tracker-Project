@@ -12,13 +12,13 @@ form2.addEventListener('submit', (e)=>{
     const name = document.querySelector('#name').value;
     const email=document.querySelector('#email').value;
     const password=document.querySelector('#password').value;
-    const data={name, email, password}
-    console.log(data)
+    const data={name, email, password};
+    console.log(data);
     
-    fetch ('userdata/db.json', {
+    fetch ('http://localhost:8000/users', {
         method: 'POST',
-        body : JSON.stringify(data),
-        Headers:{'Content-Type': 'application/json'}
+        body : JSON.stringify({data}),
+        headers:{'Content-Type': 'application/json'}
     })
     .then((resp)=>{
         console.log("Account Created")
