@@ -1,12 +1,12 @@
 // Prevent Default behavior of Login form
-const form =document.getElementById('login');
-form.addEventListener('submit', e=>{
+const loginform =document.getElementById('login');
+loginform.addEventListener('submit', e=>{
     e.preventDefault()  
     console.log("Hello")    
 })
 // Prevent Default behavior of signup form
-const form2=document.querySelector('#signup')
-form2.addEventListener('submit', (e)=>{
+const signupform=document.querySelector('#signup')
+signupform.addEventListener('submit', (e)=>{
     e.preventDefault();
     console.log("Hi")
     const name = document.querySelector('#name').value;
@@ -14,7 +14,7 @@ form2.addEventListener('submit', (e)=>{
     const password=document.querySelector('#password').value;
     const data={name, email, password};
     console.log(data);
-    
+    // Store user data in json server
     fetch ('http://localhost:8000/users', {
         method: 'POST',
         body : JSON.stringify({data}),
@@ -22,8 +22,7 @@ form2.addEventListener('submit', (e)=>{
     })
     .then((resp)=>{
         console.log("Account Created")
-    })
-    
+    }) 
 })
 
 // Show and hide login and signup forms
@@ -32,8 +31,16 @@ const handleSignup=()=>{
     let signinform=document.querySelector('#login')
     signinform.style.display='none'
     signupform.style.display='block'
+    document.querySelector('#signupbtn').style.display='none';
+    document.querySelector('#loginbtn').style.display='block'
 }
 
+// const handleLogin=()=>{
+//     let signupform=document.querySeletor('#signup')
+//     let signinform=document.querySelector('#login')
+//     signinform.style.display='block'
+//     signupform.style.display='none'
+// }
 // Get the signup button and add event listener, to hide and show login and sign forms
 // const sign= document.getElementById('handle')
 // console.log(sign.value)

@@ -18,7 +18,7 @@ body{
     padding-bottom: 8px;
 
 }
-.navbar{
+/* .navbar{
     background-color: gray;
     justify-content: center;
     text-align: left;
@@ -29,7 +29,7 @@ body{
     float: right;
     padding: 6px;
     color: white;
-}
+} */
 
 .login{
     display: flex;

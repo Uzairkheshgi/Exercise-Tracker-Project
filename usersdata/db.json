@@ -7,6 +7,14 @@
         "password": "3245235"
       },
       "id": 1
+    },
+    {
+      "data": {
+        "name": "Nisar",
+        "email": "abc@gmail",
+        "password": "12345"
+      },
+      "id": 2
     }
   ]
 }
