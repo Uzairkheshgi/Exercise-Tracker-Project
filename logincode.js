@@ -9,6 +9,21 @@ const form2=document.querySelector('#signup')
 form2.addEventListener('submit', (e)=>{
     e.preventDefault();
     console.log("Hi")
+    const name = document.querySelector('#name').value;
+    const email=document.querySelector('#email').value;
+    const password=document.querySelector('#password').value;
+    const data={name, email, password}
+    console.log(data)
+    
+    fetch ('userdata/db.json', {
+        method: 'POST',
+        body : JSON.stringify(data),
+        Headers:{'Content-Type': 'application/json'}
+    })
+    .then((resp)=>{
+        console.log("Account Created")
+    })
+    
 })
 
 // Show and hide login and signup forms
