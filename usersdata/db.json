@@ -15,6 +15,22 @@
         "password": "12345"
       },
       "id": 2
+    },
+    {
+      "data": {
+        "name": "Uzair Ullah",
+        "email": "uds@gdsn",
+        "password": "64dffh"
+      },
+      "id": 3
+    },
+    {
+      "data": {
+        "name": "waqar",
+        "email": "fdg@fdsgh",
+        "password": "56789"
+      },
+      "id": 4
     }
   ]
 }
