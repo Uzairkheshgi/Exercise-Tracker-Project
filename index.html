@@ -2,70 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
-    <link rel="stylesheet" href="style.css" />
-    <script>
-        function handleSubmit() {
-            // e.preventDefault();
-            // document.getElementById(exercise).preventDefault()
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        
-        <!-- <p>Login to track your exercise details or signup to create new account</p> -->
-        <div class="containerlogin">
-            <span>App Logo</span>
-            <!-- Login form -->
-            <form id="login" event.preventDefault>
-                <input type="text" placeholder="Username" required />
-                <input type="password" placeholder="password" required />
-                <button type="submit">Log in</button>
-            </form>
-             <!-- <a href="#">Login</a> -->
-             <a href="#">Signup</a>
-        </div>
-        <div class="containersignup">
-            <!-- Signup Form -->
-            <form id="signup" event.preventDefault>
-                    <input type="text" placeholder="username" required />
-                    <input type="password" placeholder="password" prequired />
-                    <input type="email" placeholder="email" required />
-                    <button>Create_Account</button>
-            </form>
-        </div>
-    </div>
-
-
-    <!-- Form to enter Exercise Details -->
-    <form id="exercise" event.preventDefault())>
+    <div class="wrapper">
         <div class="container">
-            <label>Name </label>
-            <input type="text" />
-            <label>Description</label>
-            <input type="text" />
-            <label>Activity Type</label>
-            <select>
-                <option>Run</option>
-                <option>Bicyle</option>
-                <option>Swim</option>
-                <option>Ride</option>
-                <option>Walk</option>
-                <option>Hike</option>
-            </select>
-            <label>Duratin</label>
-            <input type="number" />
-            <label>Date</label>
-            <input type="date" />
-            <button type="submit" onclick="handleSubmit()">Add_Data</button>
+            <div class="left_col">
+                <h1>Welcome!</h1>
+                <h3>Create new account</h3>
+                <input id="signupbtn" type="submit" value="SignUp" onclick="handleSignup()" /><br>
+                <input id="loginbtn" type="submit" value="Login" style="display: none">
+                <!-- <button id="signupbtn" type="submit">SignUp</button> -->                
+            </div>
+            <div class="right_col">
+                <!-- Login form -->
+                <form id='login' class="form" >
+                    <div class="login">
+                        <h1>Login</h1>
+                        <label>Username/Email <span>*</span></label>
+                        <input type="text" placeholder="Email or user Name" />
+                        <label>Password<span>*</span></label>
+                        <input type="password" placeholder="Password" />
+                        <input id='sub' type="submit" value="login"  />
+                    </div>
+                </form>
+                <!-- Signup form -->
+                <form id=signup style="display: none;">
+                    <div class="signup">
+                        <h1>Sing Up</h1>
+                        <label>Username<span>*</span></label>
+                        <input id="name" type="text" placeholder="user Name" required/>
+                        <label>Email <span>*</span></label>
+                        <input id="email" type="text" placeholder="Email" required/>
+                        <label>Password<span>*</span></label>
+                        <input id="password" type="password" placeholder="Password" required/>
+                        <input id='reg' type="submit" value="Register"/>
+                    </div>
+                </form>
+            </div>
         </div>
-    </form>
+    </div>  
+    
+    <script src="script.js"></script>
 </body>
 
 </html>
