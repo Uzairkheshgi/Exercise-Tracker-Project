@@ -2,24 +2,25 @@
 const loginform = document.getElementById('login');
 loginform.addEventListener('submit', e => {
     e.preventDefault();
-    let loginname = document.querySelector('#loginname');
-    let loginpassword = document.querySelector('#loginpswrd');
+    let loginname = document.querySelector('#loginname').value;
+    let loginpassword = document.querySelector('#loginpswrd').value;
     let logindata={loginname, loginpassword}
     fetch('http://localhost:8000/users')
     .then((response)=>{
         return response.json();
     })
     .then(data=>{
-        // console.log(data)
-        for (const user of data){
-            console.log(user)
-            console.log(user.data.name)
+        let x=false;
+        for (const user of data){  
             if (user.data.name===loginname && user.data.password===loginpassword){
-                console.log("Login successful")
+                console.log("Login successful");
+                x=true;
             }
         }
+        if(x==false){
+            console.log("Incorrect username or password")
+        }
     })
-    console.log("Hello");
 })
 // Prevent Default behavior of signup form
 const signupform = document.querySelector('#signup');
